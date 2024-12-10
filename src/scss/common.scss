@@ -1,0 +1,64 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+//Шапка блоку
+.block-header {
+    display: grid;
+    gap:toRem(20);
+    justify-items: start;
+
+    &--center{
+        justify-items: center;
+    }
+    &--white{
+        color:#fff;
+    }
+
+    &__label {
+        line-height: 156.25%; /* 25/16 */
+        text-transform: capitalize;
+    }
+
+    &__title {
+        color:$goldColor;
+        text-transform: capitalize;
+        font-family: "Italiana";
+        // font-size: toRem(48);
+        line-height: 120%;
+        @include adaptiveValue("font-size", 48, 42);
+    }
+
+    &__text {
+        display: grid;
+         gap:toRem(20);
+        line-height: 156.25%; /* 25/16 */
+
+        blockquote{
+            font-style: italic;
+        }
+    }
+
+    &__button {
+    }
+}
+
+.up{
+    transform: rotate(-90deg);
+    font-size: toRem(20);
+    position: fixed;
+    bottom: toRem(30);
+    right: toRem(10);
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.8s;
+    color:$bgGold;
+    z-index: 50;
+    ._watcher-view &{
+        opacity: 0;
+        visibility: hidden;
+    }
+    @media (max-width:$mobile){
+         display: none; 
+    }
+}
+
+

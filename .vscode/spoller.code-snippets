@@ -1,0 +1,10 @@
+{
+"Spollers": {
+		"scope": "html",
+		"prefix": "spollers",
+		"body": [
+			"<div data-spollers class=\"spollers\">\n\t<details class=\"spollers__item\">\n\t\t<summary class=\"spollers__title\">Заголовок спойлера</summary>\n\t\t<div class=\"spollers__body\">Контент спойлера</div>\n\t</details>\n</div>"
+		],
+		"description": "Додає базовий HTML код спойлерів"
+	},
+}
